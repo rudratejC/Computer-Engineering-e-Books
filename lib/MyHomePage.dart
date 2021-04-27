@@ -3,6 +3,7 @@ import 'package:foldable_sidebar/foldable_sidebar.dart';
 import 'package:swipedetector/swipedetector.dart';
 import 'FirstScreen.dart';
 import 'CustomDrawer.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -10,8 +11,26 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  FSBStatus drawerStatus;
+  //start     this is for storage permission
+  void initState() {
+    getPer();
+    super.initState();
+  }
 
+  Future<void> getPer() async {
+    if (await Permission.storage.request().isGranted) {
+      print("Already Granted \n\n\n");
+    } else {
+      Map<Permission, PermissionStatus> statuses = await [
+        Permission.storage,
+      ].request();
+      print(statuses[Permission.storage]);
+      print("success\n\n\n");
+    }
+  }
+  //end     this is for storage permission
+
+  FSBStatus drawerStatus;
   @override
   Widget build(BuildContext context) {
     return SafeArea(

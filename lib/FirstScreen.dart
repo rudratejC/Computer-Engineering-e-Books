@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:books_mini_project_ui/about.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
@@ -7,9 +5,13 @@ import 'package:url_launcher/url_launcher.dart';
 
 class FirstScreen extends StatelessWidget {
   final double _borderRadius = 24.0;
+
   @override
   Widget build(BuildContext context) {
     MediaQueryData mediaQuery = MediaQuery.of(context);
+    fntsz = MediaQuery.of(context).orientation == Orientation.landscape
+        ? MediaQuery.of(context).size.height * 0.035
+        : MediaQuery.of(context).size.width * 0.035;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -40,7 +42,7 @@ class FirstScreen extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.white,
                         fontFamily: "Lora",
-                        fontSize: 16,
+                        fontSize: fntsz,
                       ),
                     ),
                   ],
@@ -105,6 +107,7 @@ class FirstScreen extends StatelessWidget {
                             style: TextStyle(
                               fontFamily: "Lora",
                               color: Colors.white,
+                              fontSize: fntsz,
                             ),
                           ),
                         ),
@@ -169,9 +172,9 @@ class FirstScreen extends StatelessWidget {
                           title: Text(
                             "Suggest a change",
                             style: TextStyle(
-                              fontFamily: "Lora",
-                              color: Colors.white,
-                            ),
+                                fontFamily: "Lora",
+                                color: Colors.white,
+                                fontSize: fntsz),
                           ),
                         ),
                       ),

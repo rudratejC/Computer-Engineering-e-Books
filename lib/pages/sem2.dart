@@ -9,9 +9,9 @@ import 'package:path_provider/path_provider.dart';
 import 'package:books_mini_project_ui/FirstScreen.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
-var fntsz4;
+var fntsz2;
 
-class sem4 extends StatefulWidget {
+class sem2 extends StatefulWidget {
   @override
   _MyAppState createState() => _MyAppState();
 }
@@ -20,9 +20,9 @@ var dio = new Dio();
 
 // /storage/emulated/0/Android/data/com.example.books_mini_project_2/files
 
-class _MyAppState extends State<sem4> {
+class _MyAppState extends State<sem2> {
   Future<void> openFile(String lnk, String name, double sz) async {
-    fntsz4 = MediaQuery.of(context).orientation == Orientation.landscape
+    fntsz2 = MediaQuery.of(context).orientation == Orientation.landscape
         ? MediaQuery.of(context).size.height * 0.024
         : MediaQuery.of(context).size.width * 0.024;
     var dir = await getExternalStorageDirectory();
@@ -93,7 +93,7 @@ class _MyAppState extends State<sem4> {
                     child: ListTile(
                       leading: Image.asset('assets/CEB_Logo.png'),
                       title: Text(
-                        "Semester 4 ",
+                        "Semester 2 ",
                         style: TextStyle(
                             fontFamily: "Lora",
                             color: Colors.white,
@@ -110,13 +110,10 @@ class _MyAppState extends State<sem4> {
           ),
           InkWell(
             onTap: () {
-              print("EMIV");
+              print("Engineering Mathematics-II");
               var lnk =
                   "https://firebasestorage.googleapis.com/v0/b/booksapp-628fb.appspot.com/o/Semster%204%2FADVANCED%20ENGINEERING%20MATHEMATICS%20BY%20ERWIN%20ERESZIG1.pdf?alt=media&token=beda293c-766a-448b-84c8-bd698c6c4e0e";
               openFile(lnk, "41", 10485760);
-              setState(() {
-                //isDownloaded[0] = true;
-              });
             },
             child: Card(
               clipBehavior: Clip.antiAlias,
@@ -134,31 +131,16 @@ class _MyAppState extends State<sem4> {
                         color: Colors.white,
                       ),
                       title: const Text(
-                        'Engineering Mathematics IV ',
+                        'Engineering Mathematics-II',
                         style:
                             TextStyle(fontFamily: "Lora", color: Colors.white),
                       ),
                       subtitle: Text(
-                        'Erwin Kreyszig, “Advanced Engineering Mathematics”, John Wiley & Sons.',
+                        'Erwin Kreyszig, “Advanced Engineering Mathematics”, John Wiley & Sons',
                         style: TextStyle(
                             fontFamily: "Lora",
                             color: Colors.white.withOpacity(0.6)),
                       ),
-                      // trailing: IconButton(
-                      //   onPressed: () {
-                      //     delFile("41");
-                      //     setState(() {
-                      //       //isDownloaded[0] = false;
-                      //     });
-                      //   },
-                      //   icon: Icon(
-                      //     Icons.delete,
-                      //     key: Key('em4_del'),
-                      //     color: isDownloaded[0]
-                      //         ? Colors.white
-                      //         : Color(0xff42447a),
-                      //   ),
-                      // )
                     ),
                   ),
                 ],
@@ -170,10 +152,10 @@ class _MyAppState extends State<sem4> {
           ),
           InkWell(
             onTap: () {
-              print("Analysis of Algorithms");
+              print("Engineering Physics-II");
               var lnk =
-                  "https://firebasestorage.googleapis.com/v0/b/booksapp-628fb.appspot.com/o/Semster%204%2FIntroduction%20to%20Algorithms%2C%20Third%20Edition%20(%20PDFDrive%20).pdf?alt=media&token=452ded1b-e6c0-41fe-8172-f9ea7973f47a";
-              openFile(lnk, "42", 5033164);
+                  "https://firebasestorage.googleapis.com/v0/b/booksapp-628fb.appspot.com/o/semester%201%2Fbeiser-conceptsofmodernphysics.pdf?alt=media&token=97ca5214-7897-4e6d-9d36-dad9f2c5d640";
+              openFile(lnk, "12", 21600665);
             },
             child: Card(
               clipBehavior: Clip.antiAlias,
@@ -191,12 +173,12 @@ class _MyAppState extends State<sem4> {
                         color: Colors.white,
                       ),
                       title: const Text(
-                        'Analysis of Algorithms',
+                        'Engineering Physics-II',
                         style:
                             TextStyle(fontFamily: "Lora", color: Colors.white),
                       ),
                       subtitle: Text(
-                        'T. H. Cormen, “Introduction to algorithms”',
+                        'Concepts of Modern Physics- ArtherBeiser',
                         style: TextStyle(
                             fontFamily: "Lora",
                             color: Colors.white.withOpacity(0.6)),
@@ -212,10 +194,10 @@ class _MyAppState extends State<sem4> {
           ),
           InkWell(
             onTap: () {
-              print("python");
+              print("Engineering Chemistry-II");
               var lnk =
-                  "https://firebasestorage.googleapis.com/v0/b/booksapp-628fb.appspot.com/o/Semster%204%2FBeginning%20Python%20Using%20Python%202.6%20and%20Python%203.1.pdf?alt=media&token=46ed9ae1-c243-40b7-9626-cf97ee7270fa";
-              openFile(lnk, "43", 4194304);
+                  "https://firebasestorage.googleapis.com/v0/b/booksapp-628fb.appspot.com/o/semester%201%2Fengineeringchemistry.pdf?alt=media&token=fadcd837-6d95-48c9-92a2-70438198d723";
+              openFile(lnk, "13", 13212057);
             },
             child: Card(
               clipBehavior: Clip.antiAlias,
@@ -233,12 +215,12 @@ class _MyAppState extends State<sem4> {
                         color: Colors.white,
                       ),
                       title: const Text(
-                        'Python Programming',
+                        'Engineering Chemistry-II',
                         style:
                             TextStyle(fontFamily: "Lora", color: Colors.white),
                       ),
                       subtitle: Text(
-                        'Dr. R. Nageswara Rao, “Core Python Programming”, DreamtechPress',
+                        'Engineering Chemistry - Jain & Jain',
                         style: TextStyle(
                             fontFamily: "Lora",
                             color: Colors.white.withOpacity(0.6)),
@@ -254,10 +236,10 @@ class _MyAppState extends State<sem4> {
           ),
           InkWell(
             onTap: () {
-              print("DBMS");
+              print("Engineering Graphics");
               var lnk =
-                  "https://firebasestorage.googleapis.com/v0/b/booksapp-628fb.appspot.com/o/Semster%204%2Fkorth.pdf?alt=media&token=4e1eb786-ae92-4128-9634-214ccbc91323";
-              openFile(lnk, "44", 4194304);
+                  "https://firebasestorage.googleapis.com/v0/b/booksapp-628fb.appspot.com/o/semester%201%2Ftextbook-of-engineering-drawing.pdf?alt=media&token=fabb5fdc-3fab-42b7-a9ec-f60d7afdb4be";
+              openFile(lnk, "24", 17511219);
             },
             child: Card(
               clipBehavior: Clip.antiAlias,
@@ -275,12 +257,12 @@ class _MyAppState extends State<sem4> {
                         color: Colors.white,
                       ),
                       title: const Text(
-                        'Database Management System',
+                        'Engineering Graphics',
                         style:
                             TextStyle(fontFamily: "Lora", color: Colors.white),
                       ),
                       subtitle: Text(
-                        'Korth, Slberchatz,Sudarshan, Database System Concepts',
+                        'Engineering Drawing by V. Venkata Reddy',
                         style: TextStyle(
                             fontFamily: "Lora",
                             color: Colors.white.withOpacity(0.6)),
@@ -296,10 +278,10 @@ class _MyAppState extends State<sem4> {
           ),
           InkWell(
             onTap: () {
-              print("OS");
+              print("C programming");
               var lnk =
-                  "https://firebasestorage.googleapis.com/v0/b/booksapp-628fb.appspot.com/o/Semster%204%2FOperating%20System%20Concepts%20(%20PDFDrive%20).pdf?alt=media&token=901818ff-1db7-47f4-8eb2-dbfab489bf95";
-              openFile(lnk, "45", 30408704);
+                  "https://firebasestorage.googleapis.com/v0/b/booksapp-628fb.appspot.com/o/semester%201%2Fletusc.pdf?alt=media&token=41e3e277-3186-425c-8fef-b3b349fc8aab";
+              openFile(lnk, "25", 4089446);
             },
             child: Card(
               clipBehavior: Clip.antiAlias,
@@ -317,54 +299,12 @@ class _MyAppState extends State<sem4> {
                         color: Colors.white,
                       ),
                       title: const Text(
-                        'Operating System',
+                        'C programming',
                         style:
                             TextStyle(fontFamily: "Lora", color: Colors.white),
                       ),
                       subtitle: Text(
-                        'Abraham Silberschatz, Operating System Concepts',
-                        style: TextStyle(
-                            fontFamily: "Lora",
-                            color: Colors.white.withOpacity(0.6)),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 5,
-          ),
-          InkWell(
-            onTap: () {
-              print("MP");
-              var lnk =
-                  "https://firebasestorage.googleapis.com/v0/b/booksapp-628fb.appspot.com/o/Semster%204%2FUnderstanding%208085_8086%20Microprocessors%20and%20Peripheral%20ICs%20%20(%20PDFDrive%20).pdf?alt=media&token=250f1675-b01b-4569-98c3-3042ac9ef7d5";
-              openFile(lnk, "46", 3774873);
-            },
-            child: Card(
-              clipBehavior: Clip.antiAlias,
-              elevation: 20,
-              margin: EdgeInsets.all(10),
-              color: //Color(0xff42447a)
-                  Color(0xff42447a),
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: ListTile(
-                      leading: Icon(
-                        Icons.article,
-                        color: Colors.white,
-                      ),
-                      title: const Text(
-                        'Microprocessor',
-                        style:
-                            TextStyle(fontFamily: "Lora", color: Colors.white),
-                      ),
-                      subtitle: Text(
-                        'Understanding 8086,8086 Microprocessors',
+                        'Let us C - Yashavant P. Kanetkar',
                         style: TextStyle(
                             fontFamily: "Lora",
                             color: Colors.white.withOpacity(0.6)),
@@ -447,7 +387,7 @@ delFile(String s) async {
 // ),
 
 /*
-class _MyAppState extends State<sem4> {
+class _MyAppState extends State<sem2> {
   final double _borderRadius = 24.0;
   bool show = false;
   Future<void> openFile() async {
@@ -502,17 +442,17 @@ class _loadState extends State<load> {
               Text(
                 "Downloading file,Please wait...",
                 style: TextStyle(
-                    fontFamily: "Lora", color: Colors.white, fontSize: fntsz4),
+                    fontFamily: "Lora", color: Colors.white, fontSize: fntsz2),
               ),
               Text(
                 "It will open after download gets completed",
                 style: TextStyle(
-                    fontFamily: "Lora", color: Colors.white, fontSize: fntsz4),
+                    fontFamily: "Lora", color: Colors.white, fontSize: fntsz2),
               ),
               Text(
                 "Please do not quit app untill download completes!!",
                 style: TextStyle(
-                    fontFamily: "Lora", color: Colors.red, fontSize: fntsz4),
+                    fontFamily: "Lora", color: Colors.red, fontSize: fntsz2),
               )
             ],
           ),
@@ -557,7 +497,7 @@ class _DelState extends State<Del> {
                     color: Colors.white,
                   ),
                   title: Text(
-                    "Engineering Mathematics -IV",
+                    "Engineering Mathematics-II",
                     style: TextStyle(color: Colors.white),
                   ),
                   tileColor: Color(0xffea3c53).withOpacity(0.8),
@@ -567,7 +507,7 @@ class _DelState extends State<Del> {
                 ),
                 ListTile(
                   onTap: () {
-                    delFile("42");
+                    delFile("12");
                     Navigator.of(context).pop();
                   },
                   leading: Icon(
@@ -575,7 +515,7 @@ class _DelState extends State<Del> {
                     color: Colors.white,
                   ),
                   title: Text(
-                    "Analysis of Algorithms",
+                    "Engineering Physics-II",
                     style: TextStyle(color: Colors.white),
                   ),
                   tileColor: Color(0xffea3c53).withOpacity(0.8),
@@ -585,7 +525,7 @@ class _DelState extends State<Del> {
                 ),
                 ListTile(
                   onTap: () {
-                    delFile("43");
+                    delFile("13");
                     Navigator.of(context).pop();
                   },
                   leading: Icon(
@@ -593,7 +533,7 @@ class _DelState extends State<Del> {
                     color: Colors.white,
                   ),
                   title: Text(
-                    "Python programming",
+                    "Engineering Chemistry-II",
                     style: TextStyle(color: Colors.white),
                   ),
                   tileColor: Color(0xffea3c53).withOpacity(0.8),
@@ -603,7 +543,7 @@ class _DelState extends State<Del> {
                 ),
                 ListTile(
                   onTap: () {
-                    delFile("44");
+                    delFile("24");
                     Navigator.of(context).pop();
                   },
                   leading: Icon(
@@ -611,7 +551,7 @@ class _DelState extends State<Del> {
                     color: Colors.white,
                   ),
                   title: Text(
-                    "Database Managemet Systems",
+                    "Engineering Graphics",
                     style: TextStyle(color: Colors.white),
                   ),
                   tileColor: Color(0xffea3c53).withOpacity(0.8),
@@ -621,7 +561,7 @@ class _DelState extends State<Del> {
                 ),
                 ListTile(
                   onTap: () {
-                    delFile("45");
+                    delFile("25");
                     Navigator.of(context).pop();
                   },
                   leading: Icon(
@@ -629,28 +569,13 @@ class _DelState extends State<Del> {
                     color: Colors.white,
                   ),
                   title: Text(
-                    "Operating Systems",
+                    "C programming",
                     style: TextStyle(color: Colors.white),
                   ),
                   tileColor: Color(0xffea3c53).withOpacity(0.8),
                 ),
                 SizedBox(
                   height: 10,
-                ),
-                ListTile(
-                  onTap: () {
-                    delFile("46");
-                    Navigator.of(context).pop();
-                  },
-                  leading: Icon(
-                    Icons.delete,
-                    color: Colors.white,
-                  ),
-                  title: Text(
-                    "Microprocessor",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  tileColor: Color(0xffea3c53).withOpacity(0.8),
                 ),
               ],
             ),

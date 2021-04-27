@@ -1,4 +1,11 @@
+import 'package:books_mini_project_ui/pages/sem1.dart';
+import 'package:books_mini_project_ui/pages/sem2.dart';
+import 'package:books_mini_project_ui/pages/sem3.dart';
 import 'package:books_mini_project_ui/pages/sem4.dart';
+import 'package:books_mini_project_ui/pages/sem5.dart';
+import 'package:books_mini_project_ui/pages/sem6.dart';
+import 'package:books_mini_project_ui/pages/sem7.dart';
+import 'package:books_mini_project_ui/pages/sem8.dart';
 import 'package:flutter/material.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -9,6 +16,9 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     MediaQueryData mediaQuery = MediaQuery.of(context);
+    var fntsz = MediaQuery.of(context).orientation == Orientation.landscape
+        ? MediaQuery.of(context).size.height * 0.035
+        : MediaQuery.of(context).size.width * 0.035;
     return Container(
       //color: Colors.black,
       decoration: BoxDecoration(
@@ -57,6 +67,9 @@ class CustomDrawer extends StatelessWidget {
             ListTile(
               onTap: () {
                 debugPrint("SEM I");
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => sem1()));
+                closeDrawer();
               },
               leading: Icon(
                 Icons.article,
@@ -67,6 +80,7 @@ class CustomDrawer extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: "Lora",
                   color: Colors.white,
+                  fontSize: fntsz,
                 ),
               ),
             ),
@@ -77,6 +91,9 @@ class CustomDrawer extends StatelessWidget {
             ListTile(
               onTap: () {
                 debugPrint("SEM II");
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => sem2()));
+                closeDrawer();
               },
               leading: Icon(
                 Icons.article,
@@ -87,6 +104,7 @@ class CustomDrawer extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: "Lora",
                   color: Colors.white,
+                  fontSize: fntsz,
                 ),
               ),
             ),
@@ -97,6 +115,9 @@ class CustomDrawer extends StatelessWidget {
             ListTile(
               onTap: () {
                 debugPrint("SEM III");
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => sem3()));
+                closeDrawer();
               },
               leading: Icon(
                 Icons.article,
@@ -107,6 +128,7 @@ class CustomDrawer extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: "Lora",
                   color: Colors.white,
+                  fontSize: fntsz,
                 ),
               ),
             ),
@@ -130,6 +152,7 @@ class CustomDrawer extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: "Lora",
                   color: Colors.white,
+                  fontSize: fntsz,
                 ),
               ),
             ),
@@ -140,6 +163,9 @@ class CustomDrawer extends StatelessWidget {
             ListTile(
               onTap: () {
                 debugPrint("SEM V");
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => sem5()));
+                closeDrawer();
               },
               leading: Icon(
                 Icons.article,
@@ -150,6 +176,7 @@ class CustomDrawer extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: "Lora",
                   color: Colors.white,
+                  fontSize: fntsz,
                 ),
               ),
             ),
@@ -160,6 +187,9 @@ class CustomDrawer extends StatelessWidget {
             ListTile(
               onTap: () {
                 debugPrint("SEM VI");
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => sem6()));
+                closeDrawer();
               },
               leading: Icon(
                 Icons.article,
@@ -170,6 +200,7 @@ class CustomDrawer extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: "Lora",
                   color: Colors.white,
+                  fontSize: fntsz,
                 ),
               ),
             ),
@@ -180,6 +211,9 @@ class CustomDrawer extends StatelessWidget {
             ListTile(
               onTap: () {
                 debugPrint("SEM VII");
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => sem7()));
+                closeDrawer();
               },
               leading: Icon(
                 Icons.article,
@@ -190,6 +224,7 @@ class CustomDrawer extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: "Lora",
                   color: Colors.white,
+                  fontSize: fntsz,
                 ),
               ),
             ),
@@ -200,6 +235,9 @@ class CustomDrawer extends StatelessWidget {
             ListTile(
               onTap: () {
                 debugPrint("SEM VIII");
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => sem8()));
+                closeDrawer();
               },
               leading: Icon(
                 Icons.article,
@@ -210,6 +248,7 @@ class CustomDrawer extends StatelessWidget {
                 style: TextStyle(
                   fontFamily: "Lora",
                   color: Colors.white,
+                  fontSize: fntsz,
                 ),
               ),
             ),

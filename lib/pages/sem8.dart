@@ -9,9 +9,9 @@ import 'package:path_provider/path_provider.dart';
 import 'package:books_mini_project_ui/FirstScreen.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
-var fntsz4;
+var fntsz8;
 
-class sem4 extends StatefulWidget {
+class sem8 extends StatefulWidget {
   @override
   _MyAppState createState() => _MyAppState();
 }
@@ -20,9 +20,9 @@ var dio = new Dio();
 
 // /storage/emulated/0/Android/data/com.example.books_mini_project_2/files
 
-class _MyAppState extends State<sem4> {
+class _MyAppState extends State<sem8> {
   Future<void> openFile(String lnk, String name, double sz) async {
-    fntsz4 = MediaQuery.of(context).orientation == Orientation.landscape
+    fntsz8 = MediaQuery.of(context).orientation == Orientation.landscape
         ? MediaQuery.of(context).size.height * 0.024
         : MediaQuery.of(context).size.width * 0.024;
     var dir = await getExternalStorageDirectory();
@@ -93,7 +93,7 @@ class _MyAppState extends State<sem4> {
                     child: ListTile(
                       leading: Image.asset('assets/CEB_Logo.png'),
                       title: Text(
-                        "Semester 4 ",
+                        "Semester 8 ",
                         style: TextStyle(
                             fontFamily: "Lora",
                             color: Colors.white,
@@ -110,13 +110,10 @@ class _MyAppState extends State<sem4> {
           ),
           InkWell(
             onTap: () {
-              print("EMIV");
+              print("Human Machine Interaction");
               var lnk =
-                  "https://firebasestorage.googleapis.com/v0/b/booksapp-628fb.appspot.com/o/Semster%204%2FADVANCED%20ENGINEERING%20MATHEMATICS%20BY%20ERWIN%20ERESZIG1.pdf?alt=media&token=beda293c-766a-448b-84c8-bd698c6c4e0e";
-              openFile(lnk, "41", 10485760);
-              setState(() {
-                //isDownloaded[0] = true;
-              });
+                  "https://firebasestorage.googleapis.com/v0/b/booksapp-628fb.appspot.com/o/Semester%208%2FDix_HumanComputerInteraction.pdf?alt=media&token=db200eec-99a3-42c7-8b7f-332a56777bbd";
+              openFile(lnk, "81", 1887436);
             },
             child: Card(
               clipBehavior: Clip.antiAlias,
@@ -134,31 +131,16 @@ class _MyAppState extends State<sem4> {
                         color: Colors.white,
                       ),
                       title: const Text(
-                        'Engineering Mathematics IV ',
+                        'Human Machine Interaction',
                         style:
                             TextStyle(fontFamily: "Lora", color: Colors.white),
                       ),
                       subtitle: Text(
-                        'Erwin Kreyszig, “Advanced Engineering Mathematics”, John Wiley & Sons.',
+                        'HUMAN–COMPUTER INTERACTION -Alex Dix',
                         style: TextStyle(
                             fontFamily: "Lora",
                             color: Colors.white.withOpacity(0.6)),
                       ),
-                      // trailing: IconButton(
-                      //   onPressed: () {
-                      //     delFile("41");
-                      //     setState(() {
-                      //       //isDownloaded[0] = false;
-                      //     });
-                      //   },
-                      //   icon: Icon(
-                      //     Icons.delete,
-                      //     key: Key('em4_del'),
-                      //     color: isDownloaded[0]
-                      //         ? Colors.white
-                      //         : Color(0xff42447a),
-                      //   ),
-                      // )
                     ),
                   ),
                 ],
@@ -170,10 +152,10 @@ class _MyAppState extends State<sem4> {
           ),
           InkWell(
             onTap: () {
-              print("Analysis of Algorithms");
+              print("Distributed Computing");
               var lnk =
-                  "https://firebasestorage.googleapis.com/v0/b/booksapp-628fb.appspot.com/o/Semster%204%2FIntroduction%20to%20Algorithms%2C%20Third%20Edition%20(%20PDFDrive%20).pdf?alt=media&token=452ded1b-e6c0-41fe-8172-f9ea7973f47a";
-              openFile(lnk, "42", 5033164);
+                  "https://firebasestorage.googleapis.com/v0/b/booksapp-628fb.appspot.com/o/Semester%208%2Fdistributed-systems-principles-and-paradigms.pdf?alt=media&token=449eacc7-2104-48aa-be70-a5d0dc866ec4";
+              openFile(lnk, "82", 4508876);
             },
             child: Card(
               clipBehavior: Clip.antiAlias,
@@ -191,12 +173,12 @@ class _MyAppState extends State<sem4> {
                         color: Colors.white,
                       ),
                       title: const Text(
-                        'Analysis of Algorithms',
+                        'Distributed Computing',
                         style:
                             TextStyle(fontFamily: "Lora", color: Colors.white),
                       ),
                       subtitle: Text(
-                        'T. H. Cormen, “Introduction to algorithms”',
+                        'Distrubuted Systems-Andrew S. Tanenbaum',
                         style: TextStyle(
                             fontFamily: "Lora",
                             color: Colors.white.withOpacity(0.6)),
@@ -212,10 +194,10 @@ class _MyAppState extends State<sem4> {
           ),
           InkWell(
             onTap: () {
-              print("python");
+              print("High Performance Computing");
               var lnk =
-                  "https://firebasestorage.googleapis.com/v0/b/booksapp-628fb.appspot.com/o/Semster%204%2FBeginning%20Python%20Using%20Python%202.6%20and%20Python%203.1.pdf?alt=media&token=46ed9ae1-c243-40b7-9626-cf97ee7270fa";
-              openFile(lnk, "43", 4194304);
+                  "https://firebasestorage.googleapis.com/v0/b/booksapp-628fb.appspot.com/o/Semester%208%2Fintroduction_to_high_performance_computing_for_scientists_and_engineers.pdf?alt=media&token=baefb307-32ba-499b-83d4-d3d576b3d29f";
+              openFile(lnk, "83", 1887436);
             },
             child: Card(
               clipBehavior: Clip.antiAlias,
@@ -233,12 +215,12 @@ class _MyAppState extends State<sem4> {
                         color: Colors.white,
                       ),
                       title: const Text(
-                        'Python Programming',
+                        'High Performance Computing',
                         style:
                             TextStyle(fontFamily: "Lora", color: Colors.white),
                       ),
                       subtitle: Text(
-                        'Dr. R. Nageswara Rao, “Core Python Programming”, DreamtechPress',
+                        'Introduction to High Performance Computing-Georg Hager',
                         style: TextStyle(
                             fontFamily: "Lora",
                             color: Colors.white.withOpacity(0.6)),
@@ -254,10 +236,10 @@ class _MyAppState extends State<sem4> {
           ),
           InkWell(
             onTap: () {
-              print("DBMS");
+              print("Natural Language Processing");
               var lnk =
-                  "https://firebasestorage.googleapis.com/v0/b/booksapp-628fb.appspot.com/o/Semster%204%2Fkorth.pdf?alt=media&token=4e1eb786-ae92-4128-9634-214ccbc91323";
-              openFile(lnk, "44", 4194304);
+                  "https://firebasestorage.googleapis.com/v0/b/booksapp-628fb.appspot.com/o/Semester%208%2Flast.pdf?alt=media&token=fe27da36-f7da-43ad-a376-76f6d731b20f";
+              openFile(lnk, "84", 22858956);
             },
             child: Card(
               clipBehavior: Clip.antiAlias,
@@ -275,12 +257,12 @@ class _MyAppState extends State<sem4> {
                         color: Colors.white,
                       ),
                       title: const Text(
-                        'Database Management System',
+                        'Natural Language Processing',
                         style:
                             TextStyle(fontFamily: "Lora", color: Colors.white),
                       ),
                       subtitle: Text(
-                        'Korth, Slberchatz,Sudarshan, Database System Concepts',
+                        'Daniel Jurafsky, James H. Martin ―Speech and Language Processing ',
                         style: TextStyle(
                             fontFamily: "Lora",
                             color: Colors.white.withOpacity(0.6)),
@@ -293,87 +275,6 @@ class _MyAppState extends State<sem4> {
           ),
           SizedBox(
             height: 5,
-          ),
-          InkWell(
-            onTap: () {
-              print("OS");
-              var lnk =
-                  "https://firebasestorage.googleapis.com/v0/b/booksapp-628fb.appspot.com/o/Semster%204%2FOperating%20System%20Concepts%20(%20PDFDrive%20).pdf?alt=media&token=901818ff-1db7-47f4-8eb2-dbfab489bf95";
-              openFile(lnk, "45", 30408704);
-            },
-            child: Card(
-              clipBehavior: Clip.antiAlias,
-              elevation: 20,
-              margin: EdgeInsets.all(10),
-              color: //Color(0xff42447a)
-                  Color(0xff42447a),
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: ListTile(
-                      leading: Icon(
-                        Icons.article,
-                        color: Colors.white,
-                      ),
-                      title: const Text(
-                        'Operating System',
-                        style:
-                            TextStyle(fontFamily: "Lora", color: Colors.white),
-                      ),
-                      subtitle: Text(
-                        'Abraham Silberschatz, Operating System Concepts',
-                        style: TextStyle(
-                            fontFamily: "Lora",
-                            color: Colors.white.withOpacity(0.6)),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 5,
-          ),
-          InkWell(
-            onTap: () {
-              print("MP");
-              var lnk =
-                  "https://firebasestorage.googleapis.com/v0/b/booksapp-628fb.appspot.com/o/Semster%204%2FUnderstanding%208085_8086%20Microprocessors%20and%20Peripheral%20ICs%20%20(%20PDFDrive%20).pdf?alt=media&token=250f1675-b01b-4569-98c3-3042ac9ef7d5";
-              openFile(lnk, "46", 3774873);
-            },
-            child: Card(
-              clipBehavior: Clip.antiAlias,
-              elevation: 20,
-              margin: EdgeInsets.all(10),
-              color: //Color(0xff42447a)
-                  Color(0xff42447a),
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: ListTile(
-                      leading: Icon(
-                        Icons.article,
-                        color: Colors.white,
-                      ),
-                      title: const Text(
-                        'Microprocessor',
-                        style:
-                            TextStyle(fontFamily: "Lora", color: Colors.white),
-                      ),
-                      subtitle: Text(
-                        'Understanding 8086,8086 Microprocessors',
-                        style: TextStyle(
-                            fontFamily: "Lora",
-                            color: Colors.white.withOpacity(0.6)),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
           ),
           SizedBox(
             height: 5,
@@ -447,7 +348,7 @@ delFile(String s) async {
 // ),
 
 /*
-class _MyAppState extends State<sem4> {
+class _MyAppState extends State<sem8> {
   final double _borderRadius = 24.0;
   bool show = false;
   Future<void> openFile() async {
@@ -502,17 +403,17 @@ class _loadState extends State<load> {
               Text(
                 "Downloading file,Please wait...",
                 style: TextStyle(
-                    fontFamily: "Lora", color: Colors.white, fontSize: fntsz4),
+                    fontFamily: "Lora", color: Colors.white, fontSize: fntsz8),
               ),
               Text(
                 "It will open after download gets completed",
                 style: TextStyle(
-                    fontFamily: "Lora", color: Colors.white, fontSize: fntsz4),
+                    fontFamily: "Lora", color: Colors.white, fontSize: fntsz8),
               ),
               Text(
                 "Please do not quit app untill download completes!!",
                 style: TextStyle(
-                    fontFamily: "Lora", color: Colors.red, fontSize: fntsz4),
+                    fontFamily: "Lora", color: Colors.red, fontSize: fntsz8),
               )
             ],
           ),
@@ -549,7 +450,7 @@ class _DelState extends State<Del> {
               children: [
                 ListTile(
                   onTap: () {
-                    delFile("41");
+                    delFile("81");
                     Navigator.of(context).pop();
                   },
                   leading: Icon(
@@ -557,7 +458,7 @@ class _DelState extends State<Del> {
                     color: Colors.white,
                   ),
                   title: Text(
-                    "Engineering Mathematics -IV",
+                    "Human Machine Interaction",
                     style: TextStyle(color: Colors.white),
                   ),
                   tileColor: Color(0xffea3c53).withOpacity(0.8),
@@ -567,7 +468,7 @@ class _DelState extends State<Del> {
                 ),
                 ListTile(
                   onTap: () {
-                    delFile("42");
+                    delFile("82");
                     Navigator.of(context).pop();
                   },
                   leading: Icon(
@@ -575,7 +476,7 @@ class _DelState extends State<Del> {
                     color: Colors.white,
                   ),
                   title: Text(
-                    "Analysis of Algorithms",
+                    "Distributed Computing",
                     style: TextStyle(color: Colors.white),
                   ),
                   tileColor: Color(0xffea3c53).withOpacity(0.8),
@@ -585,7 +486,7 @@ class _DelState extends State<Del> {
                 ),
                 ListTile(
                   onTap: () {
-                    delFile("43");
+                    delFile("83");
                     Navigator.of(context).pop();
                   },
                   leading: Icon(
@@ -593,7 +494,7 @@ class _DelState extends State<Del> {
                     color: Colors.white,
                   ),
                   title: Text(
-                    "Python programming",
+                    "High Performance Computing",
                     style: TextStyle(color: Colors.white),
                   ),
                   tileColor: Color(0xffea3c53).withOpacity(0.8),
@@ -603,7 +504,7 @@ class _DelState extends State<Del> {
                 ),
                 ListTile(
                   onTap: () {
-                    delFile("44");
+                    delFile("84");
                     Navigator.of(context).pop();
                   },
                   leading: Icon(
@@ -611,46 +512,13 @@ class _DelState extends State<Del> {
                     color: Colors.white,
                   ),
                   title: Text(
-                    "Database Managemet Systems",
+                    "Natural Language Processing",
                     style: TextStyle(color: Colors.white),
                   ),
                   tileColor: Color(0xffea3c53).withOpacity(0.8),
                 ),
                 SizedBox(
                   height: 10,
-                ),
-                ListTile(
-                  onTap: () {
-                    delFile("45");
-                    Navigator.of(context).pop();
-                  },
-                  leading: Icon(
-                    Icons.delete,
-                    color: Colors.white,
-                  ),
-                  title: Text(
-                    "Operating Systems",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  tileColor: Color(0xffea3c53).withOpacity(0.8),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                ListTile(
-                  onTap: () {
-                    delFile("46");
-                    Navigator.of(context).pop();
-                  },
-                  leading: Icon(
-                    Icons.delete,
-                    color: Colors.white,
-                  ),
-                  title: Text(
-                    "Microprocessor",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  tileColor: Color(0xffea3c53).withOpacity(0.8),
                 ),
               ],
             ),
